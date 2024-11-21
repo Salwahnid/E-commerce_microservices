@@ -7,6 +7,10 @@ import org.example.customer.response.CustomerResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 @Service
 public class CustomerServiceImp implements CustomerService {
@@ -90,4 +94,32 @@ public class CustomerServiceImp implements CustomerService {
         // Suppression du client en base de données
         customerRepository.delete(customer);
     }
+
+
+//    public void saveCustomerOrderData(int customerId, String name, String email, int orderId) {
+//        String filePath = "customer_order_data.txt";
+//        String customerData = String.format("CustomerID: %d\nName: %s\nEmail: %s\nOrderID: %d",
+//                customerId, name, email, orderId);
+//
+//        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+//            writer.write(customerData);
+//            System.out.println("Customer data written to file by Customer Service.");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+//    // Exemple d'utilisation de cette méthode
+//    public static void main(String[] args) {
+//        CustomerService customerService = new CustomerService();
+//        customerService.saveCustomerOrderData(12345, "John Doe", "john.doe@example.com", 67890);
+//    }
+
+
 }
+
+
+
+
+
+
